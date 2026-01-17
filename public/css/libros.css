@@ -1,0 +1,84 @@
+
+            /* Tus estilos existentes aquí */
+            .vista-tarjetas { margin: 15px 0; }
+            .tarjetas-contenedor { 
+                display: grid; 
+                grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); 
+                gap: 15px; 
+                padding: 10px;
+            }
+            .tarjeta-libro { 
+                background: white; 
+                border-radius: 8px; 
+                box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
+                overflow: hidden;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+            .tarjeta-portada { 
+                height: 150px; 
+                background-color: #f8f9fa; 
+                display: flex; 
+                align-items: center; 
+                justify-content: center; 
+                border-bottom: 1px solid #eee;
+                padding: 10px;
+            }
+            .tarjeta-portada img {
+                max-height: 100%;
+                max-width: 100%;
+                object-fit: contain;
+            }
+            .portada-placeholder { 
+                font-size: 2.5rem; 
+                color: #6c757d; 
+            }
+            .tarjeta-contenido { 
+                padding: 12px; 
+                flex-grow: 1;
+                display: flex;
+                flex-direction: column;
+            }
+            .tarjeta-titulo { 
+                font-size: 0.95rem; 
+                margin: 0 0 6px 0; 
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                min-height: 40px;
+            }
+            .tarjeta-autor { 
+                color: #6c757d; 
+                font-size: 0.8rem; 
+                margin: 0 0 8px 0;
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+            .tarjeta-detalles { 
+                font-size: 0.75rem; 
+                color: #6c757d; 
+                margin-bottom: 12px;
+            }
+            .tarjeta-detalles span { 
+                display: block; 
+                margin-bottom: 4px;
+            }
+            .tarjeta-acciones { 
+                margin-top: auto;
+                display: flex; 
+                justify-content: flex-end; 
+            }
+            .no-resultados { 
+                grid-column: 1 / -1; 
+                text-align: center; 
+                padding: 20px; 
+                color: #6c757d; 
+            }
+            .table-responsive {
+                min-height: 300px;
+            }
+        

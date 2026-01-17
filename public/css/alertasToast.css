@@ -1,0 +1,66 @@
+/* Sistema Toast - Estilos básicos */
+.ds-toast-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999999;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    pointer-events: none;
+}
+
+.ds-toast {
+    width: 320px;
+    min-height: 60px;
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    opacity: 0;
+    transform: translateX(120%);
+    animation: 
+        ds-toast-fade-in 0.4s forwards,
+        ds-toast-slide-in 0.5s forwards;
+    pointer-events: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.ds-toast-icon {
+    font-size: 24px;
+    margin-right: 12px;
+    flex-shrink: 0;
+}
+
+.ds-toast-content {
+    flex-grow: 1;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #333333;
+}
+
+.ds-toast-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background: #4CAF50;
+    animation: ds-toast-progress linear forwards;
+}
+
+/* Tipos de Toast */
+.ds-toast--success .ds-toast-progress { background: #4CAF50; }
+.ds-toast--error .ds-toast-progress { background: #F44336; }
+.ds-toast--warning .ds-toast-progress { background: #FF9800; }
+.ds-toast--info .ds-toast-progress { background: #2196F3; }
+
+/* Animaciones */
+@keyframes ds-toast-fade-in { to { opacity: 1; } }
+@keyframes ds-toast-slide-in { to { transform: translateX(0); } }
+@keyframes ds-toast-slide-out { to { transform: translateX(120%); opacity: 0; } }
+@keyframes ds-toast-progress { from { width: 100%; } to { width: 0%; } }

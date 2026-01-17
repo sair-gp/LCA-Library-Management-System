@@ -1,0 +1,79 @@
+/* Section Styling */
+.fixed-navigation {
+  width: 100%; /* Full width */
+  background-color: #12171e; /* Dark blue background */
+  display: flex; /* Flexbox for alignment */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  position: fixed; /* Stick to the top of the page */
+  top: 0;
+  z-index: 1000; /* Ensure it stays above other elements */
+  height: 40px; /* Match the previous height */
+  padding: 0; /* Remove additional padding */
+  box-sizing: border-box; /* Ensure consistency with height */
+}
+
+/* Navbar Styling */
+.fixed-navigation .navbar {
+  display: flex; /* Flex container for navbar items */
+  justify-content: flex-end; /* Align items to the right */
+  align-items: center; /* Vertically center items */
+  width: 100%; /* Full width */
+  max-width: 1200px; /* Optional: Constrain width on large screens */
+  height: 100%; /* Match the parent's height */
+  margin: 0; /* Ensure no extra margins are added */
+}
+
+/* Dropdown Button */
+.fixed-navigation .user-options-btn {
+  background-color: transparent; /* Blend with the dark background */
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  height: 100%; /* Match the section height */
+  padding: 0 10px; /* Compact horizontal padding */
+  cursor: pointer; /* Indicate interactivity */
+}
+
+.fixed-navigation .user-options-btn:hover {
+  color: #ddd; /* Lighten color on hover */
+}
+
+/* Dropdown Menu */
+.fixed-navigation .user-options-menu {
+  position: absolute;
+  top: 40px; /* Positioned just below the section */
+  right: 0; /* Align to the right of the parent */
+  background-color: #222; /* Darker background for the dropdown */
+  border: 1px solid #444; /* Subtle border */
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
+  display: none; /* Hidden by default */
+  z-index: 1050;
+  min-width: 200px; /* Set a minimum width */
+}
+
+.fixed-navigation .user-options-menu.show {
+  display: block; /* Show the dropdown when activated */
+}
+
+.fixed-navigation .user-option-item a {
+  color: white;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.fixed-navigation .user-option-item a:hover {
+  background-color: #333; /* Highlight on hover */
+  border-radius: 4px;
+}
+
+/* Icon Styling */
+.icon-white {
+  color: white; /* Ensure icons are white for visibility */
+}

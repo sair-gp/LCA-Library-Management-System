@@ -1,0 +1,30 @@
+/*Aqui van estilos para elementos que se pueden generar dinamicamente con js*/
+
+/* Estilo general para el span-message */
+span.span-message {
+    font-size: 0.875rem; /* Tamaño de fuente más pequeño */
+    margin-top: 5px; /* Espacio superior para separar el mensaje del input */
+    display: block; /* Hace que el span se comporte como un bloque para ocupar toda la línea */
+    padding: 5px 10px; /* Espaciado interno para que el mensaje no esté pegado al borde */
+    border-radius: 3px; /* Bordes redondeados */
+    font-family: Arial, sans-serif; /* Fuente del mensaje */
+}
+
+/* Estilos para los mensajes rojos */
+span.span-message.red {
+    background-color: #f8d7da; /* Fondo rojo suave */
+    color: #721c24; /* Texto rojo oscuro */
+    border: 1px solid #f5c6cb; /* Borde rojo claro */
+}
+
+/* Estilos para los mensajes verdes */
+span.span-message.green {
+    background-color: #d4edda; /* Fondo verde suave */
+    color: #155724; /* Texto verde oscuro */
+    border: 1px solid #c3e6cb; /* Borde verde claro */
+}
+
+/* Opcional: puedes agregar un efecto al pasar el ratón sobre el mensaje */
+span.span-message:hover {
+    opacity: 0.8; /* Efecto de opacidad al pasar el ratón */
+}

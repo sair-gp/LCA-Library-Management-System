@@ -1,0 +1,197 @@
+/*.grid-contenedor {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 3fr;
+    height: 100vh;
+    background-color: gray;
+}*/
+
+.div-principal {
+  grid-area: main;
+  overflow-y: auto;
+  padding: 20px 20px;
+  background-color: #e4e4e4;
+}
+
+.titulo-principal {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cartas-principales {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.carta {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 25px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.carta:first-child {
+  background-color: beige;
+}
+
+.carta:nth-child(2) {
+  background-color: #2962ff;
+}
+
+.carta:nth-child(3) {
+  background-color: #2eaf00;
+}
+
+.carta:nth-child(4) {
+  background-color: #ff6d00;
+}
+
+.carta-interna img {
+  border-radius: 5px;
+}
+.carta-interna {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.graficas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.carta-graficas {
+  background-color: #fff;
+  margin-bottom: 20px;
+  padding: 25px;
+  box-sizing: border-box;
+  /*-webkit-column-break-inside: avoid;*/
+  border-radius: 5px;
+  box-shadow: 0 6px 7px -4px rgba(0, 0, 0, 0.2);
+}
+
+.titulo-carta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#resultado {
+  position: absolute; /* Evita que empuje otros elementos */
+  background: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 97.25%;
+  /*max-width: 600px;*/
+  display: none; /* Oculta por defecto */
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+#resultado.active {
+  display: block; /* Se muestra solo cuando tiene resultados */
+}
+
+.libro {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.libro img {
+  width: 50px;
+  height: 75px;
+  margin-right: 10px;
+}
+
+.libro div {
+  font-size: 14px;
+}
+
+.libro:hover {
+  background-color: lightgray;
+}
+
+
+
+
+
+
+.libros-populares {
+  width: 100%;
+  max-width: 95%;
+  margin: auto;
+  text-align: center;
+  background: #f8f8f8;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+.carrusel-container {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+.carrusel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+.carrusel-item {
+  display: flex;
+  align-items: center;
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 40px;
+}
+.carrusel img {
+  width: 80px;
+  height: auto;
+  border-radius: 5px;
+  margin-right: 15px;
+}
+.carrusel-info {
+  text-align: left;
+}
+.carrusel h3, .carrusel p {
+  margin: 5px 0;
+}
+.carrusel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 18px;
+  z-index: 2;
+}
+.prev { left: 5px; }
+.next { right: 5px; }
+
+
+.ver-ficha-btn {
+  display: inline-block;
+  margin-top: 5px;
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background 0.3s ease-in-out;
+}
+
+.ver-ficha-btn:hover {
+  background-color: #0056b3;
+}

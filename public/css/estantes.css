@@ -1,0 +1,632 @@
+
+/* Estilos CSS innovadores para el perfil de estantería */
+.estanteria-container {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    color: #333;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.estanteria-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 20px;
+    gap: 30px;
+}
+
+.estanteria-identificacion {
+    flex: 1;
+}
+
+.estanteria-codigo {
+    font-size: 14px;
+    color: #666;
+    background: #f5f5f5;
+    padding: 4px 10px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+.estanteria-titulo {
+    margin: 0 0 10px 0;
+    font-size: 32px;
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+.estanteria-meta {
+    display: flex;
+    gap: 20px;
+    font-size: 15px;
+    color: #666;
+}
+
+.estanteria-meta span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.estanteria-stats {
+    display: flex;
+    gap: 15px;
+}
+
+.stat-card {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 12px;
+    min-width: 120px;
+    text-align: center;
+    border-left: 4px solid #3498db;
+}
+
+.stat-value {
+    font-size: 28px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.stat-progress {
+    height: 6px;
+    background: #eee;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #3498db, #2ecc71);
+}
+
+.stat-icon {
+    font-size: 20px;
+    color: #3498db;
+    margin-top: 5px;
+}
+
+.estanteria-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    gap: 20px;
+}
+
+.search-box {
+    position: relative;
+    flex: 1;
+    max-width: 500px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    font-size: 15px;
+    transition: all 0.2s;
+}
+
+.search-box input:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+    outline: none;
+}
+
+.search-box i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+}
+
+.toolbar-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-action {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-action:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+}
+
+.libros-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.libro-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s;
+    border: 1px solid #eee;
+}
+
+.libro-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border-color: #3498db;
+}
+
+.libro-portada {
+    position: relative;
+    height: 200px;
+    background: #f5f5f5;
+}
+
+.libro-portada img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.libro-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.libro-info {
+    padding: 18px;
+}
+
+.libro-titulo {
+    margin: 0 0 5px 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.libro-autor {
+    margin: 0 0 15px 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.libro-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 13px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.libro-posicion {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.libro-estado {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.libro-estado.excelente {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.libro-estado.bueno {
+    background: #e3f2fd;
+    color: #1565c0;
+}
+
+.libro-estado.regular {
+    background: #fff8e1;
+    color: #ff8f00;
+}
+
+.libro-estado.dañado {
+    background: #ffebee;
+    color: #c62828;
+}
+
+.libro-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-libro-action {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 8px 12px;
+    background: #f5f5f5;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-libro-action:hover {
+    background: #e0e0e0;
+}
+
+.estanteria-summary {
+    margin-top: 40px;
+    padding: 25px;
+    background: #f9f9f9;
+    border-radius: 12px;
+}
+
+.estanteria-summary h3 {
+    margin: 0 0 20px 0;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #2c3e50;
+}
+
+.summary-graph {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.graph-bars {
+    display: flex;
+    height: 200px;
+    align-items: flex-end;
+    gap: 15px;
+    padding-top: 20px;
+}
+
+.graph-bar {
+    flex: 1;
+    background: #e3f2fd;
+    border-radius: 6px 6px 0 0;
+    min-width: 30px;
+    position: relative;
+    transition: height 0.5s;
+}
+
+.graph-bar-value {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    font-weight: 500;
+    color: #3498db;
+}
+
+.graph-bar-label {
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    color: #666;
+}
+
+.summary-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-summary {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-summary:hover {
+    background: #2980b9;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .estanteria-header {
+        flex-direction: column;
+    }
+    
+    .estanteria-stats {
+        width: 100%;
+    }
+    
+    .estanteria-toolbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .search-box {
+        max-width: 100%;
+    }
+    
+    .libros-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* Paginación */
+.pagination-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding: 10px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.pagination-info {
+    font-size: 14px;
+    color: #666;
+}
+
+.pagination-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.pagination-buttons button {
+    background: #f5f5f5;
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.pagination-buttons button:hover {
+    background: #e0e0e0;
+}
+
+.pagination-buttons button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.pagination-buttons #page-indicator, 
+.pagination-buttons #page-indicator-bottom {
+    font-weight: 500;
+    min-width: 20px;
+    text-align: center;
+}
+
+#items-per-page {
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    background: white;
+}
+
+/* Vista compacta */
+.libros-grid.compact-view {
+    grid-template-columns: 1fr;
+    gap: 8px;
+}
+
+.libro-card.compact {
+    display: flex;
+    flex-direction: row;
+    height: 60px;
+    padding: 8px;
+}
+
+.libro-card.compact .libro-portada {
+    width: 40px;
+    height: 40px;
+    margin-right: 12px;
+}
+
+.libro-card.compact .libro-portada img {
+    border-radius: 4px;
+}
+
+.libro-card.compact .libro-badge {
+    top: 2px;
+    right: 2px;
+    padding: 2px 6px;
+    font-size: 10px;
+}
+
+.libro-card.compact .libro-info {
+    flex: 1;
+    padding: 0;
+    overflow: hidden;
+}
+
+.libro-card.compact .libro-titulo {
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 2px;
+}
+
+.libro-card.compact .libro-autor {
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 4px;
+}
+
+.libro-card.compact .libro-meta {
+    flex-direction: row;
+    gap: 12px;
+    font-size: 11px;
+}
+
+.libro-card.compact .libro-actions {
+    display: none;
+}
+
+/* Agrupación */
+.group-header {
+    grid-column: 1 / -1;
+    font-weight: bold;
+    padding: 10px 0;
+    margin-top: 15px;
+    border-bottom: 1px solid #eee;
+    color: #3498db;
+    font-size: 1.1rem;
+}
+
+/* Mensaje sin resultados */
+.sin-resultados {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 2rem;
+    color: #666;
+    font-size: 1.1rem;
+}
+
+/* Filtros activos */
+.filter-tag.active {
+    background: #3498db;
+    color: white;
+}
+
+
+.estanteria-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+    align-items: flex-end;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.filter-label {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.filter-select {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: white;
+    font-size: 14px;
+    min-width: 180px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.filter-select:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+    outline: none;
+}
+
+.filter-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.filter-tag {
+    padding: 6px 12px;
+    background: #f5f5f5;
+    border: none;
+    border-radius: 16px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s;
+    color: #555;
+}
+
+.filter-tag:hover {
+    background: #e0e0e0;
+}
+
+.filter-tag.active {
+    background: #3498db;
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .estanteria-filters {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+    }
+    
+    .filter-group {
+        width: 100%;
+    }
+    
+    .filter-select {
+        width: 100%;
+    }
+    
+    .filter-tags {
+        justify-content: flex-start;
+    }
+}

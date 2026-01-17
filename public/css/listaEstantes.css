@@ -1,0 +1,384 @@
+
+:root {
+    --primary: #2c3e50;
+    --secondary: #34495e;
+    --accent: #3498db;
+    --light: #ecf0f1;
+    --dark: #2c3e50;
+    --success: #27ae60;
+    --warning: #e74c3c;
+}
+
+body {
+    font-family: 'Segoe UI', 'Roboto', system-ui, sans-serif;
+    background-color: #f5f7fa;
+    color: var(--dark);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.logo-icon {
+    font-size: 2rem;
+    color: var(--accent);
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.search-container {
+    position: relative;
+    width: 350px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 0.8rem 1rem 0.8rem 3rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: white;
+    color: var(--dark);
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.search-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #7f8c8d;
+}
+
+.main-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.subtitle {
+    color: #7f8c8d;
+    margin-bottom: 2rem;
+    max-width: 700px;
+}
+
+.view-toggle {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.view-btn {
+    padding: 0.6rem 1.2rem;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    color: var(--dark);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.view-btn.active {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+}
+
+.view-btn:hover {
+    background: #f0f0f0;
+}
+
+.filter-section {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.filter-label {
+    font-size: 0.85rem;
+    color: #7f8c8d;
+}
+
+.filter-select {
+    padding: 0.6rem 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: white;
+    color: var(--dark);
+    font-size: 0.9rem;
+    min-width: 180px;
+    transition: all 0.2s ease;
+}
+
+.filter-select:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+.estantes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.estante-card {
+    background: white;
+    border-radius: 6px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    border: 1px solid #e0e0e0;
+}
+
+.estante-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-color: var(--accent);
+}
+
+.estante-id {
+    font-size: 0.9rem;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.estante-tematica {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.estante-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    margin: 1.2rem 0;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.estante-stats {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid #eee;
+}
+
+.stat {
+    flex: 1;
+    text-align: center;
+}
+
+.stat-value {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+    color: var(--primary);
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    color: #7f8c8d;
+}
+
+.ocupacion-bar {
+    height: 6px;
+    background: #ecf0f1;
+    border-radius: 3px;
+    margin-top: 0.5rem;
+    overflow: hidden;
+}
+
+.ocupacion-fill {
+    height: 100%;
+    background: var(--accent);
+    border-radius: 3px;
+    transition: width 0.5s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+    
+    .search-container {
+        width: 100%;
+    }
+    
+    .estantes-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .filter-section {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+    
+    .filter-select {
+        width: 100%;
+    }
+}
+
+/* para busqueda de la ubicacion de los ejemplares */
+
+#ejemplarEstanteriaSearch {
+    position: relative;
+    width: 320px;
+}
+
+#ejemplarEstanteriaSearch .ejemplar-search-box {
+    position: relative;
+}
+
+#ejemplarEstanteriaSearch .ejemplar-search-icon {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    color: #999;
+    z-index: 2;
+}
+
+#ejemplarEstanteriaSearch .ejemplar-search-field {
+    padding-left: 35px;
+    width: 100%;
+    height: 40px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#ejemplarEstanteriaSearch .ejemplar-results-container {
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    max-height: 400px;
+    overflow-y: auto;
+    display: none;
+    position: absolute;
+    width: 100%;
+    background: white;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#ejemplarEstanteriaSearch .ejemplar-result-item {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.2s;
+}
+
+#ejemplarEstanteriaSearch .ejemplar-result-item:hover {
+    background-color: #f8f9fa;
+}
+
+#ejemplarEstanteriaSearch .ejemplar-result-icon {
+    margin-right: 12px;
+    color: #6c757d;
+    font-size: 1.2rem;
+}
+
+#ejemplarEstanteriaSearch .ejemplar-result-content {
+    flex: 1;
+}
+
+#ejemplarEstanteriaSearch .ejemplar-result-title {
+    font-weight: 600;
+    margin-bottom: 3px;
+    color: #212529;
+}
+
+#ejemplarEstanteriaSearch .ejemplar-result-meta {
+    font-size: 0.85rem;
+    color: #6c757d;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#ejemplarEstanteriaSearch .ejemplar-no-results {
+    padding: 15px;
+    text-align: center;
+    color: #6c757d;
+    font-style: italic;
+}
+
+/* Estilos mejorados para mostrar portadas */
+#ejemplarEstanteriaSearch .ejemplar-result-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 15px;
+}
+
+#ejemplarEstanteriaSearch .ejemplar-portada {
+    width: 50px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#ejemplarEstanteriaSearch .ejemplar-result-content {
+    flex: 1;
+    min-width: 0;
+}

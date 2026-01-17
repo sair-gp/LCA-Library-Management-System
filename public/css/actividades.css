@@ -1,0 +1,59 @@
+
+    /* Estilos generales para la tabla */
+    .tabla-general {
+        width: 100%;
+        border-collapse: collapse;
+        font-family: 'Arial', sans-serif;
+        font-size: 14px;
+        color: #333;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Estilos para las celdas de la tabla */
+    .tabla-general th,
+    .tabla-general td {
+        text-align: center;
+        padding: 10px;
+        border: 1px solid #ddd;
+        vertical-align: middle;
+    }
+
+    /* Encabezado */
+    .tabla-general th {
+        background-color: green;
+        color: white;
+        font-weight: bold;
+        text-transform: uppercase;
+        position: sticky;
+        top: 0;
+        z-index: 2;
+        border-bottom: 2px solid green;
+    }
+
+    /* Filas alternas */
+    .tabla-general tbody tr:nth-child(odd) {
+        background-color: #f4f6f9;
+    }
+
+    /* Hover en filas */
+    .tabla-general tbody tr:hover {
+        background-color: #eaf4ff;
+        cursor: pointer;
+    }
+
+    /* Resaltar columna de acciones */
+    .tabla-general td:last-child {
+        background-color: #f8f9fa;
+        font-weight: bold;
+        color: green;
+        border-left: 2px solid #ddd;
+    }
+
+    /* Mejora de las celdas vacías */
+    .tabla-general td[colspan] {
+        text-align: center;
+        font-style: italic;
+        color: #999;
+    }

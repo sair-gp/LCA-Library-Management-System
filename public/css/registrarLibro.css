@@ -1,0 +1,222 @@
+
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+
+    .container {
+        max-width: 95%;
+        margin: auto;
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    fieldset {
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    legend {
+        font-weight: bold;
+    }
+
+    label {
+        display: block;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+
+    small {
+        display: block;
+        color: #666;
+        margin-bottom: 5px;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    .registrarLibroBtn {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        background: #28a745;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    button:hover {
+        background: #218838;
+    }
+
+    .error-message {
+        color: #fff;
+        background-color: #f44336;
+        padding: 10px;
+        border-radius: 5px;
+        text-align: center;
+        margin-top: 10px;
+        display: none;
+        color: white;
+    }
+
+    .preview-img {
+        width: 100px;
+        height: auto;
+        margin-top: 10px;
+        border-radius: 4px;
+    }
+
+    .hidden-content {
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+    }
+
+    .show {
+        max-height: 500px; /* Ajusta este valor según el contenido */
+        opacity: 1;
+    }
+    .select2-container--default .select2-selection--single {
+        background-color: #fff;
+        border: 1px solid #ced4da;
+        border-radius: 0.25rem;
+        padding: 0.375rem 0.75rem;
+        height: auto !important; /* Para que la altura se ajuste al padding */
+        line-height: 1.5;
+        font-size: 1rem;
+        color: #495057;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    }
+    
+    .select2-container--default .select2-selection--single .select2-selection__rendered {
+        line-height: 1.5; /* Asegura la alineación vertical del texto */
+        padding-left: 0; /* Elimina el padding interno */
+    }
+    
+    .select2-container--default .select2-selection--single .select2-selection__arrow {
+        height: calc(1.5em + 0.75rem + 2px); /* Ajusta la altura de la flecha */
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .select2-container--default .select2-selection--single .select2-selection__arrow b {
+        border-color: #343a40 transparent transparent transparent; /* Color de la flecha */
+        border-style: solid;
+        border-width: 0.4em 0.4em 0 0.4em;
+        height: 0;
+        left: 0.0625em;
+        margin-left: -0.0625em;
+        margin-top: -0.25em;
+        position: absolute;
+        top: 50%;
+        width: 0;
+    }
+    
+    .select2-container--open .select2-selection--single {
+        border-color: #80bdff;
+        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    }
+    
+    .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+        background-color: #007bff; /* Color de resaltado de Bootstrap */
+        color: white;
+    }
+
+    /* ESTILOS ESPECÍFICOS PARA GESTIÓN DE EJEMPLARES */
+fieldset[legend="Gestionar ejemplares:"] {
+    padding: 15px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+}
+
+fieldset[legend="Gestionar ejemplares:"] legend {
+    width: auto;
+    padding: 0 10px;
+    font-size: 1.1em;
+    color: #495057;
+    border-bottom: none;
+}
+
+/* Contenedor principal */
+.gestion-ejemplares-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Fila de selects */
+.gestion-ejemplares-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 0 !important;
+}
+
+/* Columnas de selects */
+.gestion-ejemplares-col {
+    flex: 1;
+    min-width: 250px;
+}
+
+/* Contenedor de información de fila */
+.gestion-ejemplares-info {
+    margin-top: 8px;
+    font-size: 0.85em;
+    color: #6c757d;
+}
+
+/* Input de cantidad */
+.gestion-ejemplares-cantidad {
+    max-width: 150px !important;
+    margin-top: 10px;
+}
+
+/* Mensaje de error */
+.gestion-ejemplares-error {
+    font-size: 0.8em;
+    margin-top: 5px;
+    display: none;
+}
+
+/* Select2 personalizado para esta sección */
+.gestion-ejemplares-select2 .select2-container {
+    width: 100% !important;
+    margin-top: 5px;
+}
+
+.gestion-ejemplares-select2 .select2-selection {
+    height: 38px !important;
+    border: 1px solid #ced4da !important;
+}
+
+.gestion-ejemplares-select2 .select2-selection__rendered {
+    line-height: 36px !important;
+}
+

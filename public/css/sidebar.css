@@ -1,0 +1,271 @@
+/* Estilos base */
+.contenedor {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.user-img {
+  width: 40px;
+  height: 40px; /* Establecer la altura para mantener un cuadro */
+  border-radius: 50%; /* Hacer un círculo con el border-radius */
+  border: 1px solid #eee;
+  object-fit: cover; /* Ajustar la imagen manteniendo la relación de aspecto y cubriendo el contenedor */
+  display: flex;
+  flex-shrink: 0; /*Evita que la imagen se deforme*/
+}
+
+.sidebar.close .user {
+  justify-content: center; /* Centra la imagen en el sidebar cerrado */
+  margin-left: 0; /* Evita que se desplace */
+}
+
+.sidebar.close .user p {
+  display: none; /* Oculta el texto cuando el sidebar está cerrado */
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 5%;
+  background-color: #12171e;
+  transition: all 0.5s ease;
+  overflow: hidden;
+}
+
+.sidebar.active ~ .main-content {
+  left: 250px;
+  width: calc(100% - 250px);
+}
+
+.sidebar.active {
+  width: 250px;
+  overflow-y: auto; /* Habilitar scroll vertical cuando sea necesario */
+}
+
+/* Personaliza el scroll para que se vea más elegante */
+.sidebar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: #888; /* Color del "pulgar" del scroll */
+  border-radius: 10px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: #12171e; /* Color de la pista del scroll */
+}
+
+.sidebar #btn {
+  position: absolute;
+  color: #fff;
+  top: 0.4rem;
+  left: 50%;
+  font-size: 1.2rem;
+  line-height: 50px;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+
+.sidebar.active #btn {
+  left: 90%;
+}
+
+.sidebar .top .logo {
+  color: #fff;
+  display: flex;
+  height: 30px;
+  width: 100%;
+  align-items: center;
+  pointer-events: none;
+  margin-left: 18%;
+  opacity: 0;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.sidebar.active .top .logo {
+  opacity: 1;
+}
+
+.top .logo i {
+  font-size: 2rem;
+  margin-right: 5px;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  margin-left: 18.5%;
+}
+
+.user p {
+  color: #fff;
+  opacity: 1;
+  margin-left: 1rem;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.sidebar p {
+  opacity: 0;
+}
+
+.sidebar.active p {
+  opacity: 1;
+}
+
+.sidebar ul li {
+  position: relative;
+  list-style-type: none;
+  width: 90%;
+  margin: 0.8rem auto;
+}
+
+.sidebar ul li a {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 0.8rem;
+}
+
+.sidebar ul li a:hover {
+  background-color: #fff;
+  color: #12171e;
+}
+
+.sidebar ul li a i {
+  min-width: 100%;
+  text-align: center;
+  border-radius: 12px;
+  line-height: 50px;
+}
+
+.sidebar.active ul li a i {
+  min-width: 50%;
+}
+
+.sidebar .nav-icon {
+  opacity: 0;
+}
+
+.sidebar .nav-item {
+  opacity: 0;
+}
+
+.sidebar.active .nav-item {
+  opacity: 1;
+}
+
+.sidebar ul {
+  padding: 0px;
+}
+
+/* Submenús */
+.submenu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+  margin-left: 1rem;
+  padding-left: 1rem;
+  border-left: 2px solid #fff;
+}
+
+.submenu.active {
+  max-height: 500px; /* Ajusta según el contenido */
+  /*overflow-y: auto;*/
+}
+
+.submenu a {
+  color: #fff;
+  padding: 0.5rem 0;
+  display: block;
+  text-decoration: none;
+}
+
+.submenu a:hover {
+  background-color: #fff;
+  color: #12171e;
+}
+
+/* Tooltip para íconos */
+.sidebar ul li .tooltip {
+  position: absolute;
+  left: 125px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0.5rem 0.8rem rgba(0, 0, 0, 0.2);
+  border-radius: 0.6rem;
+  padding: 0.4rem 1.2rem;
+  line-height: 1.8rem;
+  z-index: 20;
+  opacity: 0;
+}
+
+.sidebar ul li:hover .tooltip {
+  opacity: 1;
+}
+
+.sidebar.active ul li .tooltip {
+  display: none;
+}
+
+.main-content {
+  position: absolute;
+  background-color: #eee;
+  min-height: 100vh;
+  top: 0;
+  left: 5%;
+  transition: all 0.5s ease;
+  width: calc(100% - 5%);
+}
+
+/* Por defecto, la flecha apunta hacia abajo 
+span i.toggle-icon {
+    margin-left: auto;
+    transition: transform 0.3s ease;
+}
+
+/* Cuando el menú está abierto, la flecha rota hacia arriba 
+.dropdown.open span.toggle-icon {
+    transform: rotate(180deg);
+} */
+
+.top {
+  display: flex;
+  align-items: center; /* Alinea verticalmente los elementos */
+  justify-content: space-between; /* Separa el logo y el botón */
+  padding: 10px;
+ 
+}
+
+.logo {
+  display: flex;
+  align-items: center; /* Alinea la imagen y el texto verticalmente */
+  flex: 1; /* Permite que el logo ocupe el espacio disponible */
+  min-width: 0; /* Importante para que funcione text-overflow en un flexbox */
+}
+
+#abreviacionBP {
+  white-space: nowrap;       /* Evita que el texto se divida en varias líneas */
+  overflow: hidden;          /* Oculta el texto que desborda */
+  text-overflow: ellipsis;   /* Muestra "..." cuando el texto se corta */
+  max-width: 150px;          /* Ancho máximo del texto (ajusta según sea necesario) */
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}

@@ -1,0 +1,27 @@
+# Node / JS (if you ever add packages later)
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# WAMP / database files
+*.sql
+*.sqlite
+*.db
+
+# Logs / temp files
+/logs/
+/tmp/
+
+# IDE settings
+.vscode/
+.idea/
+
+# Archive / backup files
+*.zip
+*.rar
+*.tar
+*.gz
+*.7z
+

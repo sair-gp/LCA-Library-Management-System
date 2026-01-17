@@ -1,0 +1,279 @@
+/* General */
+.vista-tabla {
+  margin: 20px auto;
+  margin-top: 45px;
+  width: 95%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+/* Cabecera */
+.tabla-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #4caf50;
+  color: white;
+  padding: 20px;
+  border-radius: 8px 8px 0 0;
+}
+
+.header-titulo h2 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.header-titulo p {
+  margin: 5px 0 0;
+  font-size: 0.9rem;
+  color: #d4d4d4;
+}
+
+.header-herramientas {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+/*
+.busqueda {
+  position: relative;
+}
+
+.input-busqueda {
+  padding: 8px 10px 8px 30px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  font-size: 1rem;
+}
+
+.busqueda i {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #888;
+}*/
+
+.btn-registrar {
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-registrar:hover {
+  background-color: #e65c50;
+  transform: scale(1.05);
+}
+
+/* Tabla */
+.tabla-contenedor {
+  max-height: 450px; /* Aproximadamente 8 registros */
+  overflow-y: auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background: white;
+}
+
+.tabla-contenedor::-webkit-scrollbar {
+  width: 8px;
+}
+
+.tabla-contenedor::-webkit-scrollbar-track {
+  background: #f4f6f9;
+  border-radius: 8px;
+}
+
+.tabla-contenedor::-webkit-scrollbar-thumb {
+  background: #4caf50;
+  border-radius: 8px;
+}
+
+.tabla-contenedor::-webkit-scrollbar-thumb:hover {
+  background: #45a049;
+}
+
+.tabla-general {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabla-general th,
+.tabla-general td {
+  padding: 12px 15px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.tabla-general thead {
+  background-color: #333;
+  color: white;
+}
+
+.tabla-general tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.tabla-general tbody tr:hover {
+  background-color: #ddd;
+}
+
+/* Botones de acciones */
+.btn-general {
+  padding: 5px 10px;
+  margin: 2px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.btn-general:first-child {
+  background-color: #ffc107;
+}
+
+.btn-general:nth-child(2) {
+  background-color: #17a2b8;
+}
+
+/*  .btn-devolver {
+    background-color: #ffc107;
+}
+
+.btn-renovar {
+    background-color: #17a2b8;
+}*/
+
+.btn-general:hover {
+  opacity: 0.9;
+}
+
+/* Paginación */
+.paginacion-contenedor {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.paginacion-contenedor a {
+  color: #4caf50;
+  margin: 0 5px;
+  padding: 8px 12px;
+  border: 1px solid #4caf50;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.paginacion-contenedor a:hover {
+  background-color: #4caf50;
+  color: white;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .tabla-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-herramientas {
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+
+  .btn-registrar {
+    margin-left: auto;
+  }
+}
+
+.tabla-general {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  color: #333;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para las celdas de la tabla */
+.tabla-general th,
+.tabla-general td {
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #333;
+  vertical-align: middle;
+}
+
+/* Encabezado */
+.tabla-general th {
+  background-color: #333;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  border-bottom: 2px solid #333;
+}
+
+/* Hover en filas */
+.tabla-general tbody td:hover {
+  background-color: #eaf4ff;
+  cursor: pointer;
+}
+
+/* Mejora de las celdas vacías */
+.tabla-general td[colspan] {
+  text-align: center;
+  font-style: italic;
+  color: #999;
+}
+
+.tabla-general th:first-child {
+  font-weight: bold;
+}
+
+
+   .input-busqueda {
+    padding: 8px 15px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    width: 250px;
+    transition: all 0.3s;
+}
+
+.input-busqueda:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+    width: 305px;
+}
+
+.busqueda {
+    position: relative;
+}
+
+.busqueda i {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+}
+
+/* Estilo para el mensaje de no resultados */
+tbody tr td[colspan] {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+    font-style: italic;
+}

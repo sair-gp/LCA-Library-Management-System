@@ -1,0 +1,6 @@
+/* Estilo para el botón renovar deshabilitado */
+
+/* Efecto de hover rápido */
+.btn-general[disabled]:hover {
+  cursor: not-allowed; /* Mostrar que no se puede hacer clic */
+}

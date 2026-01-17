@@ -1,0 +1,236 @@
+.config-container {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+}
+
+.config-tabs {
+    display: flex;
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 10px;
+    cursor: pointer;
+    background: #eee;
+    border: none;
+    font-size: 16px;
+}
+
+.tab-btn.active {
+    background: #007bff;
+    color: white;
+}
+
+.config-tab-content {
+    display: none;
+}
+
+.config-tab-content.active {
+    display: block;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+}
+
+.form-control {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.btn-primary {
+    background: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.btn-primary:hover {
+    background: #0056b3;
+}
+
+@media (max-width: 600px) {
+    .config-container {
+        padding: 10px;
+    }
+}
+
+.preview-img {
+    width: 100px;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 4px;
+}
+
+/* Estilos para la sección de respaldo */
+.respaldo-container {
+text-align: center;
+padding: 20px;
+background: #ffffff;
+border-radius: 12px;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.respaldo-description {
+font-size: 16px;
+color: #555;
+margin-bottom: 20px;
+}
+
+.respaldo-card {
+background: linear-gradient(135deg, #007bff, #0056b3);
+padding: 20px;
+border-radius: 12px;
+color: white;
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 15px;
+margin-bottom: 20px;
+}
+
+.respaldo-icon {
+font-size: 48px;
+color: #fff;
+}
+
+.respaldo-info {
+text-align: center;
+}
+
+.respaldo-info p {
+margin: 5px 0;
+font-size: 14px;
+}
+
+.respaldo-fecha {
+font-weight: bold;
+font-size: 16px;
+}
+
+.btn-respaldo {
+background: #ffffff;
+color: #007bff;
+padding: 10px 20px;
+border: none;
+border-radius: 8px;
+font-size: 16px;
+cursor: pointer;
+display: flex;
+align-items: center;
+gap: 10px;
+transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn-respaldo:hover {
+background: #f0f0f0;
+transform: translateY(-2px);
+}
+
+.btn-respaldo i {
+font-size: 20px;
+}
+
+.respaldo-alert {
+background: #fff3cd;
+padding: 10px;
+border-radius: 8px;
+color: #856404;
+display: flex;
+align-items: center;
+gap: 10px;
+font-size: 14px;
+}
+
+.respaldo-alert i {
+font-size: 20px;
+color: #ffc107;
+}
+
+.circulacion-container {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.circulacion-column, .multas-column {
+    flex: 1;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.circulacion-column h3, .multas-column h3 {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .circulacion-container {
+        flex-direction: column;
+    }
+}
+
+.circulacion-container {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    height: 500px; /* Altura fija para el contenedor principal */
+}
+
+.circulacion-column, .multas-column {
+    flex: 1;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* Habilita el scroll vertical */
+    max-height: 100%; /* Asegura que no exceda la altura del contenedor padre */
+}
+
+/* Estilos personalizados para la barra de desplazamiento */
+.circulacion-column::-webkit-scrollbar, .multas-column::-webkit-scrollbar {
+    width: 8px; /* Ancho de la barra de desplazamiento */
+}
+
+.circulacion-column::-webkit-scrollbar-track, .multas-column::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Color de fondo de la barra de desplazamiento */
+    border-radius: 4px;
+}
+
+.circulacion-column::-webkit-scrollbar-thumb, .multas-column::-webkit-scrollbar-thumb {
+    background: #888; /* Color del thumb (barra deslizante) */
+    border-radius: 4px;
+}
+
+.circulacion-column::-webkit-scrollbar-thumb:hover, .multas-column::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color del thumb al pasar el mouse */
+}
+
+@media (max-width: 768px) {
+    .circulacion-container {
+        flex-direction: column;
+        height: auto; /* En móviles, la altura se ajusta al contenido */
+    }
+
+    .circulacion-column, .multas-column {
+        max-height: 300px; /* Altura máxima para móviles */
+    }
+}

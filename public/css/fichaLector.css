@@ -1,0 +1,601 @@
+
+/* Estilos generales */
+.perfil-container {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Encabezado del perfil */
+.perfil-header {
+    display: flex;
+    gap: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 24px;
+    align-items: flex-start;
+}
+
+.perfil-avatar-container {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.perfil-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.perfil-status {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #4CAF50;
+    border: 3px solid #fff;
+}
+
+.perfil-info {
+    flex-grow: 1;
+}
+
+.perfil-nombre {
+    margin: 0 0 8px 0;
+    font-size: 28px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.perfil-metadata, .perfil-contacto {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #666;
+}
+
+.perfil-metadata span, .perfil-contacto span {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.perfil-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.btn-suspender, .btn-imprimir {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s;
+}
+
+.btn-suspender {
+    background: #f39c12;
+    color: white;
+}
+
+.btn-suspender:hover {
+    background: #e67e22;
+}
+
+.btn-suspender:active {
+    background: #d35400;  /* Naranja más intenso al hacer clic */
+}
+
+.btn-imprimir {
+    background: #f1f1f1;
+    color: #333;
+}
+
+.btn-imprimir:hover {
+    background: #e0e0e0;
+}
+
+/* Pestañas */
+.perfil-tabs {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    padding: 12px 24px;
+    background: none;
+    border: none;
+    border-bottom: 3px solid transparent;
+    font-weight: 500;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.tab-btn:hover {
+    color: #3498db;
+}
+
+.tab-btn.active {
+    color: #3498db;
+    border-bottom-color: #3498db;
+}
+
+.tab-pane {
+    display: none;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+/* Información General */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+.info-card {
+    background: #f9f9f9;
+    padding: 16px;
+    border-radius: 8px;
+    border-left: 4px solid #3498db;
+}
+
+.info-card h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 16px;
+    color: #3498db;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.info-card p {
+    margin: 0;
+    color: #555;
+    line-height: 1.5;
+}
+
+.info-fullwidth {
+    background: #f9f9f9;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 24px;
+}
+
+.info-fullwidth h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 16px;
+    color: #3498db;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.observaciones {
+    margin: 0;
+    color: #555;
+    line-height: 1.5;
+    font-style: italic;
+}
+
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag {
+    background: #e0e0e0;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    color: #555;
+}
+
+/* Préstamos Activos */
+.prestamos-container {
+    background: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.prestamos-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background: #3498db;
+    color: white;
+}
+
+.prestamos-header h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.prestamos-stats {
+    display: flex;
+    gap: 16px;
+}
+
+.stat-box {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.stat-box strong {
+    font-weight: 600;
+}
+
+.prestamos-scrollable {
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 16px;
+}
+
+.prestamo-card {
+    display: flex;
+    gap: 16px;
+    padding: 16px;
+    background: white;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s;
+}
+
+.prestamo-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.prestamo-card.por-vencer {
+    border-left: 4px solid #e74c3c;
+}
+
+.prestamo-portada {
+    flex-shrink: 0;
+}
+
+.prestamo-portada img {
+    width: 60px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.prestamo-info {
+    flex-grow: 1;
+}
+
+.prestamo-info h4 {
+    margin: 0 0 4px 0;
+    font-size: 16px;
+}
+
+.prestamo-autor {
+    margin: 0 0 8px 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.prestamo-fechas {
+    display: flex;
+    gap: 16px;
+    font-size: 13px;
+    color: #888;
+}
+
+.prestamo-fechas span {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.prestamo-status {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.dias-restantes {
+    font-size: 14px;
+    color: #3498db;
+    font-weight: 500;
+}
+
+.btn-renovar {
+    padding: 6px 12px;
+    background: #f1f1f1;
+    border: none;
+    border-radius: 4px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.btn-renovar:hover {
+    background: #e0e0e0;
+}
+
+/* Historial */
+.historial-container {
+    background: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.historial-filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background: #3498db;
+    color: white;
+}
+
+.filter-select {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.filter-select option {
+    color: #333;
+}
+
+.historial-scrollable {
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 16px;
+}
+
+.historial-item {
+    display: flex;
+    gap: 16px;
+    padding: 16px;
+    background: white;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.historial-item.completado {
+    border-left: 4px solid #2ecc71;
+}
+
+.historial-item.retraso {
+    border-left: 4px solid #e74c3c;
+}
+
+.historial-icon {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #f1f1f1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #3498db;
+}
+
+.historial-item.completado .historial-icon {
+    color: #2ecc71;
+}
+
+.historial-item.retraso .historial-icon {
+    color: #e74c3c;
+}
+
+.historial-details {
+    flex-grow: 1;
+}
+
+.historial-details h4 {
+    margin: 0 0 4px 0;
+    font-size: 16px;
+}
+
+.historial-fechas {
+    display: flex;
+    gap: 16px;
+    font-size: 13px;
+    color: #888;
+}
+
+.historial-retraso {
+    background: #f8d7da;
+    color: #721c24;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* Estadísticas */
+.stats-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 20px;
+}
+
+.stats-card {
+    background: #f9f9f9;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.stats-card.big {
+    grid-column: span 2;
+}
+
+.stats-card h3 {
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 16px;
+    color: #3498db;
+}
+
+.grafico-barras {
+    display: flex;
+    height: 200px;
+    align-items: flex-end;
+    gap: 8px;
+    padding-top: 20px;
+}
+
+.barra {
+    flex-grow: 1;
+    background: #3498db;
+    border-radius: 4px 4px 0 0;
+    position: relative;
+    min-width: 20px;
+    transition: height 0.5s;
+}
+
+.barra::after {
+    content: attr(data-mes);
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    color: #666;
+}
+
+.grafico-pastel {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background: conic-gradient(
+        #4e79a7 0% 40%,
+        #f28e2b 40% 70%,
+        #e15759 70% 90%,
+        #76b7b2 90% 100%
+    );
+    margin: 0 auto 16px;
+}
+
+.leyenda {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    font-size: 13px;
+}
+
+.leyenda div {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.color-muestra {
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+    display: inline-block;
+}
+
+.resumen-item {
+    margin-bottom: 12px;
+}
+
+.resumen-valor {
+    font-size: 24px;
+    font-weight: 600;
+    color: #3498db;
+    display: block;
+}
+
+.resumen-label {
+    font-size: 13px;
+    color: #666;
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #aaa;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .perfil-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .perfil-metadata, .perfil-contacto {
+        flex-direction: column;
+        gap: 4px;
+    }
+    
+    .perfil-actions {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .perfil-tabs {
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .stats-card.big {
+        grid-column: span 1;
+    }
+}

@@ -1,0 +1,226 @@
+/* Variables de diseño */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --light-bg: #f8f9fa;
+    --text-color: #333;
+    --text-light: #6c757d;
+    --border-color: #dee2e6;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Sección del Autor - Mejorada */
+.author-profile {
+    margin-bottom: 2rem;
+}
+
+.autor-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .autor-container {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
+
+.autor-avatar {
+    flex-shrink: 0;
+}
+
+.autor-foto {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--light-bg);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.autor-info {
+    flex: 1;
+}
+
+.autor-info h1 {
+    margin: 0 0 0.5rem 0;
+    font-size: 2.2rem;
+    color: var(--primary-color);
+}
+
+.autor-bio {
+    margin: 1.5rem 0;
+    padding: 1.2rem;
+    background-color: var(--light-bg);
+    border-radius: 8px;
+    border-left: 4px solid var(--secondary-color);
+}
+
+.autor-bio p {
+    margin: 0;
+    color: var(--text-color);
+}
+
+.autor-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+.meta-item i {
+    color: var(--secondary-color);
+}
+
+/* Sección de Libros - Compatible con tu JS */
+.books-section {
+    margin-top: 2rem;
+}
+
+.libros-table-container {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.search-container {
+    position: relative;
+    margin-bottom: 1.5rem;
+    max-width: 500px;
+}
+
+.search-container i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-light);
+}
+
+.search-container input {
+    width: 100%;
+    padding: 0.8rem 1rem 0.8rem 2.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.search-container input:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+.libros-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.libros-table th {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+}
+
+.libros-table td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: middle;
+}
+
+.libros-table tr:last-child td {
+    border-bottom: none;
+}
+
+.libros-table tr:hover td {
+    background-color: rgba(52, 152, 219, 0.05);
+}
+
+.no-books {
+    text-align: center;
+    padding: 2rem !important;
+    color: var(--text-light);
+}
+
+/* Paginación - Compatible con tu JS */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.pagination button {
+    padding: 0.6rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    min-width: 40px;
+}
+
+.pagination button:hover:not(.active) {
+    background-color: var(--light-bg);
+}
+
+.pagination button.active {
+    background-color: var(--primary-color);
+    color: #fff;
+    border-color: var(--primary-color);
+}
+
+/* Botón de acción */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}

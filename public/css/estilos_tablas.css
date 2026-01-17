@@ -1,0 +1,328 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+    color: #333;
+}
+
+.tittle-div-head h3 {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tittle-div-head h3 img {
+    margin-right: 10px;
+    height: 5vh;
+}
+
+.div-a-centrar-tabla {
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: auto;
+}
+
+.tableFixHead {
+    width: 100%;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    max-height: 500px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.tableFixHead::-webkit-scrollbar {
+    width: 12px;
+}
+
+.tableFixHead::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    border-radius: 10px;
+}
+
+.tableFixHead::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+}
+
+.tableFixHead::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+/* Table Styles */
+table.miyazaki {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Agenda-Light, sans-serif;
+    font-weight: 100;
+    background: #333;
+    color: #fff;
+    text-rendering: optimizeLegibility;
+}
+
+table.miyazaki thead th,
+table.miyazaki tbody td {
+    padding: 0.8rem;
+    font-size: 1rem;
+    text-align: center;
+}
+
+table.miyazaki tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+table.miyazaki tbody tr:nth-child(even) {
+    background-color: #d0d0d0;
+}
+
+table.miyazaki thead th {
+    background-color: #333;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+/* Button Styles */
+.input-grupo .input-group-text {
+    background-color: #ddd;
+    border: 1px solid #ccc;
+}
+
+.input-grupo input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    width: 200px;
+}
+
+.btn-group .btn {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+}
+
+.btn-group .btn img {
+    height: 5vh;
+}
+
+/* Pagination Styles */
+/* Estilo general para el contenedor de la fila */
+.row {
+    display: flex;
+    justify-content: center; /* Centra los elementos en la fila */
+    align-items: center;
+    width: 100%;
+    margin-top: 10px; /* Controla la distancia entre la tabla y la paginación */
+}
+
+/* Contenedor de paginación */
+.col-sm-7 {
+    display: flex;
+    justify-content: center; /* Centra la paginación en la página */
+}
+
+/* Estilo para la paginación */
+.pagination {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
+
+.pagination .page-item {
+    margin: 0 5px; /* Espacio entre los botones */
+}
+
+.pagination .page-link {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    color: #333;
+    text-decoration: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Estilos para los botones activos y deshabilitados */
+.pagination .page-item.disabled .page-link {
+    color: #ccc;
+    pointer-events: none;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+}
+
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .div-a-centrar-tabla {
+        width: 95%;
+    }
+}
+
+@media (max-width: 992px) {
+    .input-grupo input {
+        width: 100%;
+    }
+
+    .tableFixHead {
+        max-height: 400px;
+    }
+
+    .btn-group .btn {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .div-a-centrar-tabla {
+        width: 100%;
+        padding: 10px;
+    }
+
+    table.miyazaki thead {
+        display: none; /* Ocultar los encabezados de tabla en pantallas pequeñas */
+    }
+
+    table.miyazaki tbody td {
+        display: block;
+        padding-left: 30%;
+        font-size: 0.9rem;
+    }
+
+    table.miyazaki tbody td:before {
+        content: attr(data-th);
+        position: absolute;
+        left: 10px;
+        top: 0;
+        font-weight: bold;
+    }
+
+    .input-grupo input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .pagination {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .tableFixHead {
+        max-height: 300px;
+    }
+
+    table.miyazaki tbody td {
+        font-size: 0.8rem;
+        padding-left: 20%;
+    }
+
+    .input-grupo input {
+        width: 100%;
+    }
+
+    .pagination .page-item {
+        font-size: 0.8rem;
+    }
+
+    .btn-group .btn {
+        font-size: 0.8rem;
+    }
+}
+
+
+/* Mantener el tamaño de los botones constantes */
+.input-grupo input {
+    width: 200px; /* Ancho fijo */
+    height: 38px; /* Altura fija */
+    padding: 0.5rem;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.input-grupo .input-group-text {
+    background-color: #ddd;
+    border: 1px solid #ccc;
+    height: 38px; /* Altura fija */
+}
+
+.btn-group .btn {
+    padding: 0.5rem 1rem; /* Relleno interno */
+    height: 38px; /* Altura fija */
+    min-width: 140px; /* Ancho mínimo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-group .btn img {
+    height: 5vh; /* Ajusta la altura de las imágenes */
+}
+
+/* Evitar que el input de búsqueda y los botones cambien de tamaño cuando el sidebar se abre */
+.sidebar-open .input-grupo input {
+    width: 200px !important; /* Forzar el ancho */
+    height: 38px !important; /* Forzar la altura */
+}
+
+.sidebar-open .input-grupo .input-group-text {
+    height: 38px !important; /* Forzar la altura */
+}
+
+.sidebar-open .btn-group .btn {
+    height: 38px !important; /* Forzar la altura */
+    min-width: 100px !important; /* Forzar el ancho mínimo */
+}
+
+   /* Añade esto a tu hoja de estilos */
+   .input-busqueda2 {
+    padding: 8px 15px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    width: 250px;
+    transition: all 0.3s;
+}
+
+.input-busqueda2:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+    width: 300px;
+}
+
+.busqueda2 {
+    position: relative;
+}
+
+.busqueda2 i {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+}
+
+/* Estilo para el mensaje de no resultados */
+tbody tr td[colspan] {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+    font-style: italic;
+}

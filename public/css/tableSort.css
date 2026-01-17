@@ -1,0 +1,26 @@
+.table-sortable th {
+    cursor: pointer;
+
+}
+
+.table-sortable .th-sort-asc::after {
+    content: "\25b4"; /*triangle for asc*/
+}
+
+.table-sortable .th-sort-desc::after {
+    content: "\25be"; /*triangle for desc*/
+}
+
+.flecha-arriba {
+    content: "\25b4"; /*triangle for asc*/
+}
+
+.table-sortable .th-sort-asc::after,
+.table-sortable .th-sort-desc::after {
+    margin-left: 5px;
+}
+/*
+.table-sortable .th-sort-asc,
+.table-sortable .th-sort-desc {
+    background: rgba (1, 1, 1, 0.1); /*This doesn't work if the background color is applied to the th instead of the tr 
+} */
