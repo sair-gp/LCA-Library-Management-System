@@ -25,3 +25,7 @@ Thumbs.db
 *.gz
 *.7z
 
+# Ignore unwanted PHP files
+diagrama.php
+inputTest.php
+
